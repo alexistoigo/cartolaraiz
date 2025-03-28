@@ -63,31 +63,5 @@
     });
   
     observer.observe(document.body, { childList: true, subtree: true });
-
-    function addAdBanner() {
-        const adDiv = document.createElement("div");
-        adDiv.id = "extension-ad-banner";
-        adDiv.style.position = "fixed";
-        adDiv.style.bottom = "0";
-        adDiv.style.left = "0";
-        adDiv.style.width = "100%";
-        adDiv.style.zIndex = "9999";
-        adDiv.style.background = "#fff";
-        adDiv.style.textAlign = "center";
-        adDiv.style.borderTop = "1px solid #ccc";
-        adDiv.style.padding = "5px 0";
-        adDiv.innerHTML = `
-          <a href="https://seu-link-de-afiliado.com" target="_blank">
-            <img src="https://seu-servidor.com/seu-banner-ad.png" alt="Publicidade" style="max-width: 100%; height: auto;">
-          </a>
-        `;
-        document.body.appendChild(adDiv);
-      }
-    
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", addAdBanner);
-      } else {
-        addAdBanner();
-      }
   })();
   
